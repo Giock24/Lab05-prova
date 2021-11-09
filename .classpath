@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="workspace/lab05/gitex1/git-exercise/git-exercise/src"/>
+	<classpathentry kind="src" path="workspace/lab05/src"/>
+	<classpathentry kind="output" path="workspace/lab05/bin"/>
+</classpath>
