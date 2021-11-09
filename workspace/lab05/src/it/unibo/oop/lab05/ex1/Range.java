@@ -12,6 +12,5 @@ public class Range implements Iterable<String>{
 	
 	public java.util.Iterator<String> iterator() {
 		return new RangeIterator(this.start, this.stop);
-		
 	}	
 }
