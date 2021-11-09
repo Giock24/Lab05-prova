@@ -13,22 +13,24 @@ public class Range implements Iterable<String>{
 	}
 	
 	public java.util.Iterator<String> iterator() {
-		return new RangeIterator2(this.start, this.stop);
+		return new RangeIterator(this.start, this.stop);
 	}
 	
-	private class RangeIterator2 extends Range implements Iterator<String>{
+	private static class RangeIterator extends Range implements Iterator<String>{
 		
 		private String current;
+		private final String stop;
 		private int count;
 
-		public RangeIterator2(String start, String stop) {
+		public RangeIterator(String start, String stop) {
 			super(start, stop);
 			this.current = start;
+			this.stop = stop;
 			this.count = 0;
 		}
 		
 		public boolean hasNext() {
-			return Integer.parseInt(this.current) < Integer.parseInt(stop);
+			return Integer.parseInt(this.current) < Integer.parseInt(this.stop);
 		}
 
 		public String next() {
