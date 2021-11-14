@@ -12,18 +12,13 @@ public class Range implements Iterable<String>{
 		this.stop = stop;
 	}
 	
-	public java.util.Iterator<String> iterator() {
-		class RangeIterator implements Iterator<String>{
-			
-			private String current;
-			private final String stop;
-			private int count;
+	public Iterator<String> iterator() {
+		
+		return new Iterator<String>(){
 
-			public RangeIterator() {
-				this.current = Range.this.start;
-				this.stop = Range.this.stop;
-				this.count = 0;
-			}
+			private String current = Range.this.start;
+			private final String stop = Range.this.stop;
+			private int count = 0;
 			
 			public boolean hasNext() {
 				return Integer.parseInt(this.current) < Integer.parseInt(this.stop);
@@ -37,11 +32,7 @@ public class Range implements Iterable<String>{
 				return this.current;
 			}
 			
-		}
-		
-		return new RangeIterator();
+		};
 	}
-	
-	
 	
 }
