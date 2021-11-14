@@ -11,6 +11,7 @@ public class UseEnum {
 		/*Si possono aggiungere tutte le Regioni enumerate 
 		* in una botta sola? Certo eheh!
 		*/
+		
 		for (Region r : Region.values()) {
 			//System.out.println(r);
 			regionList.add(r);
