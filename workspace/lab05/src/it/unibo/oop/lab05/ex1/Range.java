@@ -13,18 +13,18 @@ public class Range implements Iterable<String>{
 	}
 	
 	public java.util.Iterator<String> iterator() {
-		return new RangeIterator(this.start, this.stop);
+		return new RangeIterator();
 	}
 	
-	private static class RangeIterator implements Iterator<String>{
+	private class RangeIterator implements Iterator<String>{
 		
 		private String current;
 		private final String stop;
 		private int count;
 
-		public RangeIterator(String start, String stop) {
-			this.current = start;
-			this.stop = stop;
+		public RangeIterator() {
+			this.current = Range.this.start;
+			this.stop = Range.this.stop;
 			this.count = 0;
 		}
 		
