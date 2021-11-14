@@ -16,14 +16,13 @@ public class Range implements Iterable<String>{
 		return new RangeIterator(this.start, this.stop);
 	}
 	
-	private static class RangeIterator extends Range implements Iterator<String>{
+	private static class RangeIterator implements Iterator<String>{
 		
 		private String current;
 		private final String stop;
 		private int count;
 
 		public RangeIterator(String start, String stop) {
-			super(start, stop);
 			this.current = start;
 			this.stop = stop;
 			this.count = 0;
