@@ -11,6 +11,13 @@ public class UseEnum {
 		/*Si possono aggiungere tutte le Regioni enumerate 
 		* in una botta sola? Certo eheh!
 		*/
+		int r1 = Region.ABRUZZO.ordinal();
+		//System.out.println(r1);
+		for(Region r : new Range(Region.ABRUZZO, Region.CAMPANIA)) {
+			System.out.println(r);
+		}
+
+		
 		
 		for (Region r : Region.values()) {
 			//System.out.println(r);
@@ -21,9 +28,11 @@ public class UseEnum {
 		//regionList.add(Region.CALABRIA);
 		
 		// Stampo a video tutto ciò che ho messo in regionList
+		/*
 		for (Region r : regionList) {
 			System.out.println(r);
 		}
+		*/
 	}
 
 }

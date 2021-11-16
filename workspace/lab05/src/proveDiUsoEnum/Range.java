@@ -27,6 +27,13 @@ public class Range implements Iterable<Region>{
 
 			public Region next() {
 				if(this.count != 0) {
+					int numero = this.current.ordinal() + 1;
+					//System.out.println(numero);
+					for (Region r:  Region.values()) {
+						if (r.ordinal() == numero) {
+							this.current = r;
+						}
+					}
 					//this.current = Enum.parseInt((this.current.ordinal()) + 1));
 				}
 				this.count++;
